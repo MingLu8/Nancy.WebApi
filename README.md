@@ -1,4 +1,4 @@
-The purpose of the project is to enable attribute routing and minimizing the code changes with switching between Nancy and ASP.NET WebAPI.
+The purpose of the project is to enable attribute routing with Nancy framework and minimizing the code changes needed if one decides to use ASP.NET WebAPI later on.
 
 Here is some sample usage:
 
