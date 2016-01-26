@@ -79,6 +79,7 @@
     <Compile Include="DummieObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuerryParameterTests.cs" />
+    <Compile Include="ResponseMessageTests.cs" />
     <Compile Include="RouteInfoTests.cs" />
   </ItemGroup>
   <ItemGroup>
