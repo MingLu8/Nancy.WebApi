@@ -59,13 +59,23 @@ namespace Nancy.WebApi
         {
             return dynamicParameters =>
             {
-                object result = InvokeRouteHandlerMethod(method, dynamicParameters.ToDictionary());
+                dynamic result = InvokeRouteHandlerMethod(method, dynamicParameters.ToDictionary());               
                 return CreateResponse(result);
             };
         }
 
-        private dynamic CreateResponse(object result)
+        private bool IsResponseMessageResult(object result)
         {
+            var sourceType = result.GetType().UnderlyingSystemType;
+            var targetType = typeof (ResponseMessage<>);
+            return sourceType.Namespace == targetType.Namespace && sourceType.Name == targetType.Name;
+        }
+
+        protected virtual dynamic CreateResponse(dynamic result)
+        {
+            if (IsResponseMessageResult(result))
+                return result.ConstuctResponse();
+
             if (result is string)
                 return CreateStringResponse(result);
 
@@ -107,7 +117,7 @@ namespace Nancy.WebApi
         }
 
         private dynamic CreateImageResponse(object result)
-        {           
+        {                       
             return new Response
             {
                 ContentType = "application/octet-stream",
