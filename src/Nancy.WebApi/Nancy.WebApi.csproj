@@ -49,6 +49,7 @@
     <Compile Include="Attributes.cs" />
     <Compile Include="ApiController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseMessage.cs" />
     <Compile Include="RouteInfo.cs" />
     <Compile Include="Extractors.cs" />
     <Compile Include="Serializers.cs" />
