@@ -8,80 +8,80 @@ namespace Nancy.WebApi.Tests
     [RoutePrefix("api/body")]
     public class BodyParameterModule : ApiController
     {
-        [HttpGet(nameof(SendInt))]
+        [HttpGet(nameof(SendInt) + "/{input}")]
         public dynamic SendInt(int input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendString))]
+        [HttpGet(nameof(SendString) + "/{input}")]
         public dynamic SendString(string input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendDouble))]
+        [HttpGet(nameof(SendDouble) + "/{input}")]
         public dynamic SendDouble(double input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendDate))]
+        [HttpGet(nameof(SendDate) + "/{input}")]
         public dynamic SendDate(DateTime input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendEnumByValue))]
+        [HttpGet(nameof(SendEnumByValue) + "/{input}")]
         public dynamic SendEnumByValue(Gender input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendEnumByName))]
+        [HttpGet(nameof(SendEnumByName) + "/{input}")]
         public dynamic SendEnumByName(Gender input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendIntArray))]
+        [HttpGet(nameof(SendIntArray) + "/{input}")]
         public dynamic SendIntArray(int[] input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendIntList))]
+        [HttpGet(nameof(SendIntList) + "/{input}")]
         public dynamic SendIntList(List<int> input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendByeArray))]
+        [HttpGet(nameof(SendByeArray) + "/{input}")]
         public byte[] SendByeArray(byte[] input)
         {
             return input;
         }
 
 
-        [HttpGet(nameof(SendStringKeyStringValueDictionary))]
+        [HttpGet(nameof(SendStringKeyStringValueDictionary) + "/{input}")]
         public dynamic SendStringKeyStringValueDictionary(Dictionary<string, string> input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendIntKeyStringValueDictionary))]
+        [HttpGet(nameof(SendIntKeyStringValueDictionary) + "/{input}")]
         public dynamic SendIntKeyStringValueDictionary(Dictionary<int, string> input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendStringKeyComplexValueDictionary))]
+        [HttpGet(nameof(SendStringKeyComplexValueDictionary) + "/{input}")]
         public dynamic SendStringKeyComplexValueDictionary(Dictionary<int, User> input)
         {
             return input;
         }
 
-        [HttpGet(nameof(SendImage))]
+        [HttpGet(nameof(SendImage) + "/{input}")]
         public dynamic SendImage(Image input)
         {
             return input;
